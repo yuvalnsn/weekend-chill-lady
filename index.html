@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend - Chill Lady</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfbf9;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .numerology-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%239C92AC' fill-opacity='0.06' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 0.5rem;
+            background: linear-gradient(to right, #d1a0a0, #a088b8, #88b8a0);
+            padding: 3px;
+        }
+
+        .gradient-border-content {
+            border-radius: 0.4rem;
+            background: white;
+            height: 100%;
+        }
+
+        .custom-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 65px;
+        }
+    </style>
+</head>
+<body>
+<!-- Hero Section -->
+<header class="relative bg-gradient-to-br from-purple-100 via-pink-50 to-rose-100 numerology-bg min-h-screen flex items-center">
+    <div class="container mx-auto px-4 py-32 sm:py-40 z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-5xl sm:text-6xl font-semibold text-purple-900 mb-4">Weekend - Chill Lady</h1>
+            <p class="text-xl sm:text-2xl text-purple-800 mb-8">Роскошный отдых для современных женщин</p>
+            <p class="text-lg text-gray-700 mb-10">
+                Дорогая, а что, если на один из летних уикендов ты подаришь себе настоящее
+                удовольствие? В компании таких же, как ты – уверенных, самодостаточных, состоявшихся женщин,
+                которые умеют ценить красоту жизни.
+            </p>
+            <a href="#program" class="inline-block bg-purple-700 hover:bg-purple-800 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                Узнать больше
+            </a>
+        </div>
+    </div>
+    <div class="wave-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-white"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-white"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-white"></path>
+        </svg>
+    </div>
+</header>
+
+<!-- Concept Section -->
+<section class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-900 mb-12">Особенный формат отдыха</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Ты знаешь это ощущение – когда все есть: стабильность, свобода, достаток… но хочется
+                новых красок, новых встреч, новых эмоций.
+            </p>
+            <p class="text-lg text-gray-700 mb-10">
+                Мы — Лера, Надя и Аня — придумали особенный формат отдыха. Легкий, стильный,
+                полный удовольствий и душевных разговоров.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="mb-4 text-purple-700">
+                            <i class="fas fa-spa text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple-900 mb-3">Наполнение уикенда</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-gem text-purple-600 mt-1 mr-3"></i>
+                                <span>Глубокие разговоры</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-moon text-purple-600 mt-1 mr-3"></i>
+                                <span>Медитации для расслабления и перезагрузки</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-heart text-purple-600 mt-1 mr-3"></i>
+                                <span>Интимный фитнес</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-600 mt-1 mr-3"></i>
+                                <span>Нумерология, Таро, культовая игра «Лила»</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="mb-4 text-purple-700">
+                            <i class="fas fa-utensils text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-purple-900 mb-3">Кулинарные удовольствия</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-600 mt-1 mr-3"></i>
+                                <span>Вкусная друзская и европейская кухня</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-wine-glass-alt text-purple-600 mt-1 mr-3"></i>
+                                <span>Божественная сангрия</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-coffee text-purple-600 mt-1 mr-3"></i>
+                                <span>Лучшие сорта кофе и чая</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-cookie text-purple-600 mt-1 mr-3"></i>
+                                <span>Сладкий кнафе</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="py-16 sm:py-24 bg-purple-50 numerology-bg">
+    <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-900 mb-12">Идеальное место для отдыха</h2>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <img src="iloveimg-resized/1B8A8991.jpg" alt="Вилла с видом на гору Кармель" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold text-purple-900 mb-3">Роскошная вилла с видом на гору Кармель</h3>
+                    <p class="text-gray-700 mb-4">
+                        Мы нашли идеальное место недалеко от Хайфы — роскошную виллу с видом на гору
+                        Кармель.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-bed text-purple-600 mt-1 mr-3"></i>
+                            <span>Просторные номера (2-3 человека)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-swimming-pool text-purple-600 mt-1 mr-3"></i>
+                            <span>Бассейн</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-hot-tub text-purple-600 mt-1 mr-3"></i>
+                            <span>Сауна</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-cloud-sun text-purple-600 mt-1 mr-3"></i>
+                            <span>Умиротворяющая атмосфера</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Section -->
+<section id="program" class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-900 mb-12">Программа мероприятия</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-glass-cheers text-purple-700 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold text-purple-900">Знакомство</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            Знакомство, танцы и легкий ужин, лотерея.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-pray text-purple-700 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold text-purple-900">Медитация</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            Медитация "Вне измерения" - это красивая медитация - танец, который помогает
+                            собрать рассеянную энергию.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-fire text-purple-700 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold text-purple-900">Интимный фитнес</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            Интимный фитнес "Элегантная чувственность" - Простой и доступный для
+                            выполнения комплекс упражнений, который укрепляет мышцы малого таза, развивает
+                            чувствительность, повышает тонус. Отличная профилактика гинекологических
+                            заболеваний, укрепление мочеиспускательной системы, а также усиления сексуальных
+                            ощущений.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-magic text-purple-700 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold text-purple-900">Гадание и нумерология</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            Гадание на картах и нумерологические тайны - расклады на Таро, оракулах, тайны
+                            чисел и их влияние на вас.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-dharmachakra text-purple-700 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold text-purple-900">Трансформационная игра</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            Трансформационная игра — Лила — это древняя индийская игра, которой
+                            насчитывается более 2000 лет. Лила — это символическая модель жизни, исследование
+                            причинно-следственных связей вашей реальности.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-female text-purple-700 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-semibold text-purple-900">Секреты красоты</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            Секреты красоты - расскажем о легких и доступных методах сохранения и преумножения
+                            красоты, стройности и здоровья.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 space-y-4">
+                <div class="flex items-start">
+                    <i class="fas fa-swimming-pool text-purple-600 mt-1 mr-3"></i>
+                    <p class="text-gray-700">
+                        <span class="font-semibold">Бассейн</span> — чтобы поплавать, и просто насладиться моментом.
+                    </p>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-comments text-purple-600 mt-1 mr-3"></i>
+                    <p class="text-gray-700">
+                        <span class="font-semibold">Беседы</span> обо всем и ни о чем ….
+                    </p>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-plus-circle text-purple-600 mt-1 mr-3"></i>
+                    <p class="text-gray-700">
+                        И еще много интересного ….
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Organizers Section -->
+<section class="py-16 sm:py-24 bg-purple-50 numerology-bg">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-900 mb-12">Давай знакомиться?</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-center">
+            Несмотря на то, что мы примерно одного возраста и живём в Израиле,
+            У нас абсолютно разные отправные точки и профессии но нас объединяет вера в то,
+            что жизнь с комфортом — это не роскошь, а особый стиль, искусство заботиться о
+            себе, выбирать лучшее и наслаждаться каждой мелочью. "Бог в деталях" - ты же знаешь.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="h-64 bg-purple-200">
+                    <img src="iloveimg-resized" alt="Лера" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-purple-900 mb-3">Лера</h3>
+                    <p class="text-gray-700">
+                        "Мои подруги говорят, что я - вандервуман, талантливая и многогранная, потому
+                        что я - ученый - химик, танцую Танго, погружаюсь с аквалангом, катаюсь на
+                        высокогорных лыжах по черным трассам, пишу офигенные рассказы, и еще я проводник в
+                        игре Лила"... Но я считаю, что никакая я не вандервумен, и не мотиватор, наукой не
+                        занимаюсь- тут нужна целеустремленность, катаюсь на синих, а не на черных трассах,
+                        ныряю неглубоко, и исключительно для того, чтоб потусоваться с мужем, рассказы пишу,
+                        потому что - это способ самовыражения, а проводник Лила - это да, это я.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="h-124 bg-purple-200">
+                    <img src="iloveimg-resizedadia.jpeg" alt="Надя" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-purple-900 mb-3">Надя</h3>
+                    <p class="text-gray-700">
+                        "Женский тренер, помогаю женщинам научиться получать удовольствие. Коуч от
+                        международных ассоциаций ICU, ICTA и IANLP, мастер НЛП, психолог, ведущая активных
+                        медитаций, фасилитатор, аромотерапевт, ведущая нескольких трансформационный игр,
+                        инструктор по интимной гимнастике для женщин, автор и ведущая ретритов, тренингов и
+                        семинаров на различные темы."
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="h-64 bg-purple-200">
+                    <img src="iloveimg-resized//api/placeholder/400/300" alt="Аня" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-purple-900 mb-3">Аня</h3>
+                    <p class="text-gray-700">
+                        "Я -таролог, нумеролог, нуртрицолог (на этом "лог" в моей презентации закончился,
+                        и теперь я только "автор"). Автор двух эзотерических книг: "Найди свой путь в Таро.
+                        Время знать." и "Блеск подковы в лунном свете", автор нумерологического метода
+                        исчисления "Звезда Давида", автор художественных рассказов и повести "Рука Мирьям",
+                        Мастер НЛП." Помогаю изменить качество жизни, улучшить ее Вкус.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-900 mb-12">Стоимость участия</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <h3 class="text-2xl font-semibold text-purple-900 mb-3">Номер на 3 человека</h3>
+                        <p class="text-3xl font-bold text-purple-800 mb-6">2400₪</p>
+                        <a href="https://allpay.to/~nmorozovsky/c5fe5f" class="block w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                            Забронировать
+                        </a>
+                    </div>
+                </div>
+
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <h3 class="text-2xl font-semibold text-purple-900 mb-3">Номер на 4 человека</h3>
+                        <p class="text-3xl font-bold text-purple-800 mb-6">2310₪</p>
+                        <a href="https://allpay.to/~nmorozovsky/ce6558" class="block w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                            Забронировать
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="gradient-border custom-shadow">
+                    <div class="gradient-border-content p-6">
+                        <h3 class="text-xl font-semibold text-purple-900 mb-3">Предоплата</h3>
+                        <p class="text-2xl font-bold text-purple-800 mb-6">600₪</p>
+                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full bg-purple-700 hover:bg-purple-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                            Внести предоплату
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-16 sm:py-24 bg-gradient-to-br from-purple-50 to-pink-50 numerology-bg">
+    <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-900 mb-12">Галерея</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedB8A8991.jpg" alt="Вилла" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold">Вилла</h3>
+                        <p class="text-sm">Роскошная вилла с видом на гору Кармель</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedB8A9003.jpg" alt="Бассейн" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold">Бассейн</h3>
+                        <p class="text-sm">Освежающий бассейн для отдыха</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedB8A9004.jpg" alt="Медитация" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold">Медитация</h3>
+                        <p class="text-sm">Расслабляющие практики</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedB8A9009.jpg" alt="Таро" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold">Таро</h3>
+                        <p class="text-sm">Мистические практики</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedB8A9012.jpg" alt="Угощения" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold">Угощения</h3>
+                        <p class="text-sm">Изысканные блюда и напитки</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedB8A9014.jpg" alt="Игра Лила" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-lg font-semibold">Игра Лила</h3>
+                        <p class="text-sm">Древняя трансформационная игра</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Larger Images for Desktop View -->
+            <div class="hidden lg:grid grid-cols-2 gap-6 mt-8">
+                <!-- Large Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedB8A9022.jpg" alt="Вид виллы" class="w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-semibold">Панорамный вид</h3>
+                        <p class="text-base">Вид на гору Кармель с виллы</p>
+                    </div>
+                </div>
+
+                <!-- Large Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resized0250402_094329%5B1%5D.jpg" alt="Участницы" class="w-full h-80 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-semibold">Атмосфера</h3>
+                        <p class="text-base">Душевная атмосфера на мероприятии</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Images Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <!-- Additional Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resized0250402_094550%5B1%5D.jpg" alt="Дополнительное фото" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Additional Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedMG-20250402-WA0022.jpeg" alt="Дополнительное фото" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Additional Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedMG-20250402-WA0024.jpeg" alt="Дополнительное фото" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Additional Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg custom-shadow transition-all duration-300 transform hover:scale-105">
+                    <img src="iloveimg-resizedMG-20250402-WA0026.jpeg" alt="Дополнительное фото" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-16 sm:py-24 bg-purple-700 text-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-8">Есть вопросы?</h2>
+            <p class="text-lg mb-8">
+                По любым вопросам обращаться по номеру WhatsApp:
+            </p>
+            <a href="https://wa.me/972525591570" class="inline-flex items-center text-xl font-semibold bg-white text-purple-700 py-3 px-8 rounded-full hover:bg-purple-100 transition duration-300">
+                <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                0525591570
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 bg-purple-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Weekend - Chill Lady. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>
