@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #fff;
+            background-color: #f8f3e9; /* Light beige background instead of white */
             color: #5d4037;
         }
 
@@ -22,18 +22,18 @@
         .gradient-border {
             position: relative;
             border-radius: 0.5rem;
-            background: linear-gradient(to right, #d2b48c, #c19a6b, #e6c9a8);
+            background: linear-gradient(to right, #e6d7c3, #d2b48c, #e6c9a8); /* More beige gradient */
             padding: 3px;
         }
 
         .gradient-border-content {
             border-radius: 0.4rem;
-            background: white;
+            background: #f8f3e9; /* Light beige background instead of white */
             height: 100%;
         }
 
         .custom-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 25px -5px rgba(150, 126, 104, 0.15), 0 8px 10px -6px rgba(150, 126, 104, 0.1);
         }
 
         .wave-divider {
@@ -70,30 +70,46 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color: #c19a6b;
+            background-color: #d2b48c; /* More beige color */
             transition: width 0.3s ease-in-out;
         }
 
         .nav-link:hover::after {
             width: 100%;
         }
+
+        /* Updated card backgrounds */
+        .card-bg {
+            background-color: #fbf8f2; /* Very light beige for cards */
+        }
+
+        /* Button styles */
+        .beige-button {
+            background-color: #d2b48c;
+            color: #5d4037;
+            transition: all 0.3s ease;
+        }
+
+        .beige-button:hover {
+            background-color: #c19a6b;
+        }
     </style>
 </head>
 <body>
 <!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#f8f3e9] shadow-md">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
-            <a href="#" class="text-2xl font-semibold text-amber-900">Chill Lady</a>
+            <a href="#" class="text-2xl font-semibold text-[#8b6b4c]">Chill Lady</a>
             <div class="hidden md:flex space-x-8">
-                <a href="#program" class="nav-link text-amber-900 hover:text-amber-700 font-medium">Программа</a>
-                <a href="#location" class="nav-link text-amber-900 hover:text-amber-700 font-medium">Место</a>
-                <a href="#pricing" class="nav-link text-amber-900 hover:text-amber-700 font-medium">Стоимость</a>
-                <a href="#about" class="nav-link text-amber-900 hover:text-amber-700 font-medium">О нас</a>
+                <a href="#program" class="nav-link text-[#8b6b4c] hover:text-[#a18163] font-medium">Программа</a>
+                <a href="#location" class="nav-link text-[#8b6b4c] hover:text-[#a18163] font-medium">Место</a>
+                <a href="#pricing" class="nav-link text-[#8b6b4c] hover:text-[#a18163] font-medium">Стоимость</a>
+                <a href="#about" class="nav-link text-[#8b6b4c] hover:text-[#a18163] font-medium">О нас</a>
             </div>
             <!-- Mobile menu button -->
             <div class="md:hidden">
-                <button type="button" class="text-amber-900 hover:text-amber-700 focus:outline-none">
+                <button type="button" class="text-[#8b6b4c] hover:text-[#a18163] focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -101,127 +117,56 @@
     </div>
 </nav>
 <!-- Mobile menu (hidden by default) -->
-<div class="hidden md:hidden fixed inset-0 z-40 bg-white p-4" id="mobile-menu">
+<div class="hidden md:hidden fixed inset-0 z-40 bg-[#f8f3e9] p-4" id="mobile-menu">
     <div class="flex justify-end">
-        <button class="text-amber-900 hover:text-amber-700 focus:outline-none">
+        <button class="text-[#8b6b4c] hover:text-[#a18163] focus:outline-none">
             <i class="fas fa-times text-xl"></i>
         </button>
     </div>
     <div class="flex flex-col space-y-4 mt-8 text-center">
-        <a href="#program" class="text-amber-900 hover:text-amber-700 text-lg py-2">Программа</a>
-        <a href="#location" class="text-amber-900 hover:text-amber-700 text-lg py-2">Место</a>
-        <a href="#pricing" class="text-amber-900 hover:text-amber-700 text-lg py-2">Стоимость</a>
-        <a href="#about" class="text-amber-900 hover:text-amber-700 text-lg py-2">О нас</a>
+        <a href="#program" class="text-[#8b6b4c] hover:text-[#a18163] text-lg py-2">Программа</a>
+        <a href="#location" class="text-[#8b6b4c] hover:text-[#a18163] text-lg py-2">Место</a>
+        <a href="#pricing" class="text-[#8b6b4c] hover:text-[#a18163] text-lg py-2">Стоимость</a>
+        <a href="#about" class="text-[#8b6b4c] hover:text-[#a18163] text-lg py-2">О нас</a>
     </div>
 </div>
 <!-- Add padding for the fixed navbar -->
 <div class="pt-16"></div>
 <!-- Hero Section -->
-<header class="relative bg-white min-h-screen flex items-center">
+<header class="relative bg-[#f8f3e9] min-h-screen flex items-center">
     <div class="container mx-auto px-4 py-32 sm:py-40 z-10">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-5xl sm:text-6xl font-semibold text-amber-900 mb-4">Weekend - Chill Lady</h1>
-            <p class="text-xl sm:text-2xl text-amber-800 mb-8">26–28 июня 2025 года</p>
+            <h1 class="text-5xl sm:text-6xl font-semibold text-[#8b6b4c] mb-4">Weekend - Chill Lady</h1>
+            <p class="text-xl sm:text-2xl text-[#a18163] mb-8">26–28 июня 2025 года</p>
             <p class="text-lg text-gray-700 mb-10">
                 <span class="block mb-3">Летний уикенд, в который ты возвращаешься к себе.</span>
                 <span class="block mb-3">Дорогая, а что, если этим летом ты подаришь себе не просто отдых — а настоящее удовольствие?</span>
-                <span class="block">В кругу женщин, таких же, как ты. Лёгких. Свободных. Состоявшихся.</span>
+                <span class="block mb-3">В кругу женщин, таких же, как ты. Лёгких. Свободных. Состоявшихся.</span>
+                <span class="block">Тех, кто умеет ценить красоту жизни — и жаждет её новой глубины.</span>
             </p>
-            <a href="#program" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+            <a href="#program" class="inline-block beige-button font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
                 Узнать больше
             </a>
         </div>
     </div>
     <div class="wave-divider">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-white"></path>
-            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-white"></path>
-            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-white"></path>
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="fill-[#f8f3e9]"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="fill-[#f8f3e9]"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="fill-[#f8f3e9]"></path>
         </svg>
     </div>
 </header>
 
-<!-- Concept Section -->
-<section class="py-16 sm:py-24 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-amber-900 mb-12">Особенный формат отдыха</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                Ты знаешь это состояние: всё вроде бы хорошо — достаток, свобода, привычный ритм.
-                Но где-то внутри тихо звучит: "А что дальше? А где я? А что — для меня?"
-            </p>
-            <p class="text-lg text-gray-700 mb-10">
-                Мы — Лера, Надя и Аня — придумали особенный уикенд. Без перегруза. Без пафоса. Просто тёплая встреча с собой.
-                В женском кругу, в красивом месте, с практиками, которые работают.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div class="gradient-border custom-shadow">
-                    <div class="gradient-border-content p-6">
-                        <div class="mb-4 text-amber-700">
-                            <i class="fas fa-spa text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-amber-900 mb-3">Наполнение уикенда</h3>
-                        <ul class="space-y-2">
-                            <li class="flex items-start">
-                                <i class="fas fa-gem text-amber-600 mt-1 mr-3"></i>
-                                <span>Глубокие разговоры</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-moon text-amber-600 mt-1 mr-3"></i>
-                                <span>Медитации для расслабления и перезагрузки</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-heart text-amber-600 mt-1 mr-3"></i>
-                                <span>Интимный фитнес</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-star text-amber-600 mt-1 mr-3"></i>
-                                <span>Нумерология, Таро, культовая игра «Лила»</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="gradient-border custom-shadow">
-                    <div class="gradient-border-content p-6">
-                        <div class="mb-4 text-amber-700">
-                            <i class="fas fa-utensils text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-amber-900 mb-3">Кулинарные удовольствия</h3>
-                        <ul class="space-y-2">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-3"></i>
-                                <span>Вкусная друзская и европейская кухня</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-wine-glass-alt text-amber-600 mt-1 mr-3"></i>
-                                <span>Божественная сангрия</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-coffee text-amber-600 mt-1 mr-3"></i>
-                                <span>Лучшие сорта кофе и чая</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-cookie text-amber-600 mt-1 mr-3"></i>
-                                <span>Сладкий кнафе</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Location Section -->
-<section id="location" class="py-16 sm:py-24 bg-white">
+<section id="location" class="sm:py-24 bg-[#f8f3e9]">
     <div class="container mx-auto px-4">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-amber-900 mb-12">Идеальное место для отдыха</h2>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-[#8b6b4c] mb-12">Идеальное место для отдыха</h2>
 
             <div class="max-w-2xl mx-auto">
-                <h3 class="text-xl font-semibold text-amber-900 mb-3">Роскошная вилла с видом на гору Кармель</h3>
+                <h3 class="text-xl font-semibold text-[#8b6b4c] mb-3">Роскошная вилла с видом на гору Кармель</h3>
                 <p class="text-gray-700 mb-4">
                     Мы выбрали виллу недалеко от Хайфы — светлое, живое пространство с видом на Кармель.
                     Просторные комнаты (на 3–4 участницы), бассейн, джакузи, вечерние посиделки, тихие утра.
@@ -229,19 +174,19 @@
                 </p>
                 <ul class="space-y-2">
                     <li class="flex items-start">
-                        <i class="fas fa-bed text-amber-600 mt-1 mr-3"></i>
+                        <i class="fas fa-bed text-[#d2b48c] mt-1 mr-3"></i>
                         <span>Просторные номера (3-4 человека)</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-swimming-pool text-amber-600 mt-1 mr-3"></i>
+                        <i class="fas fa-swimming-pool text-[#d2b48c] mt-1 mr-3"></i>
                         <span>Бассейн</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-hot-tub text-amber-600 mt-1 mr-3"></i>
+                        <i class="fas fa-hot-tub text-[#d2b48c] mt-1 mr-3"></i>
                         <span>Джакузи</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-cloud-sun text-amber-600 mt-1 mr-3"></i>
+                        <i class="fas fa-cloud-sun text-[#d2b48c] mt-1 mr-3"></i>
                         <span>Умиротворяющая атмосфера</span>
                     </li>
                 </ul>
@@ -251,10 +196,10 @@
 </section>
 
 <!-- Program Section -->
-<section id="program" class="py-16 sm:py-24 bg-white">
+<section id="program" class="py-16 sm:py-24 bg-[#f8f3e9]">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-amber-900 mb-12">🌿 Weekend — Chill Lady</h2>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-[#8b6b4c] mb-12">🌿 Weekend — Chill Lady</h2>
 
             <div class="gradient-border custom-shadow mb-12">
                 <div class="gradient-border-content p-8">
@@ -266,8 +211,8 @@
 
                     <!-- Day 1 -->
                     <div class="mb-6">
-                        <h3 class="text-2xl font-semibold text-amber-900 mb-4 flex items-center">
-                            <i class="fas fa-wine-glass text-amber-700 mr-3"></i>
+                        <h3 class="text-2xl font-semibold text-[#8b6b4c] mb-4 flex items-center">
+                            <i class="fas fa-wine-glass text-[#c19a6b] mr-3"></i>
                             🍷 Четверг — Вход в пространство
                         </h3>
                         <div class="pl-6 space-y-2 text-gray-700">
@@ -293,8 +238,8 @@
 
                     <!-- Day 2 -->
                     <div class="mb-6">
-                        <h3 class="text-2xl font-semibold text-amber-900 mb-4 flex items-center">
-                            <i class="fas fa-sun text-amber-700 mr-3"></i>
+                        <h3 class="text-2xl font-semibold text-[#8b6b4c] mb-4 flex items-center">
+                            <i class="fas fa-sun text-[#c19a6b] mr-3"></i>
                             ☀️ Пятница — День телесности, игры и красоты
                         </h3>
                         <div class="pl-6 space-y-2 text-gray-700">
@@ -321,8 +266,8 @@
 
                     <!-- Day 3 -->
                     <div>
-                        <h3 class="text-2xl font-semibold text-amber-900 mb-4 flex items-center">
-                            <i class="fas fa-leaf text-amber-700 mr-3"></i>
+                        <h3 class="text-2xl font-semibold text-[#8b6b4c] mb-4 flex items-center">
+                            <i class="fas fa-leaf text-[#c19a6b] mr-3"></i>
                             🌾 Суббота — Завершение, которое остаётся внутри
                         </h3>
                         <div class="pl-6 space-y-2 text-gray-700">
@@ -342,19 +287,19 @@
 
             <div class="mt-10 space-y-4">
                 <div class="flex items-start">
-                    <i class="fas fa-swimming-pool text-amber-600 mt-1 mr-3"></i>
+                    <i class="fas fa-swimming-pool text-[#d2b48c] mt-1 mr-3"></i>
                     <p class="text-gray-700">
                         <span class="font-semibold">Бассейн</span> — чтобы поплавать, и просто насладиться моментом.
                     </p>
                 </div>
                 <div class="flex items-start">
-                    <i class="fas fa-comments text-amber-600 mt-1 mr-3"></i>
+                    <i class="fas fa-comments text-[#d2b48c] mt-1 mr-3"></i>
                     <p class="text-gray-700">
                         <span class="font-semibold">Беседы</span> обо всем и ни о чем ….
                     </p>
                 </div>
                 <div class="flex items-start">
-                    <i class="fas fa-plus-circle text-amber-600 mt-1 mr-3"></i>
+                    <i class="fas fa-plus-circle text-[#d2b48c] mt-1 mr-3"></i>
                     <p class="text-gray-700">
                         И еще много интересного ….
                     </p>
@@ -365,9 +310,12 @@
 </section>
 
 <!-- Organizers Section -->
-<section id="about" class="py-16 sm:py-24 bg-white">
+<section id="about" class="py-16 sm:py-24 bg-[#f8f3e9]">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl sm:text-4xl font-semibold text-center text-amber-900 mb-12">Давай знакомиться?</h2>
+        <h2 class="text-3xl sm:text-4xl font-semibold text-center text-[#8b6b4c] mb-12">Давай знакомиться?</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-6 text-center">
+            Прежде чем ты присоединишься — давай познакомимся.
+        </p>
         <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-center">
             Мы — три женщины, каждая со своей историей и своим способом быть.
             Нам не нужно быть одинаковыми, чтобы идти в одном направлении.
@@ -375,51 +323,76 @@
             Без ролей. Без спешки.
         </p>
 
+        <div class="max-w-4xl mx-auto mb-12">
+            <p class="text-lg text-gray-700 mb-6">
+                Здесь не будет "ведущих" и "ведомых". Здесь есть те, кто умеют слушать, делиться, быть рядом.
+                По-настоящему. Мягко. Честно. Без давления. С уважением.
+            </p>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="h-80 bg-amber-200 overflow-hidden">
+            <div class="bg-[#fbf8f2] rounded-lg shadow-lg overflow-hidden">
+                <div class="h-80 bg-[#e6d7c3] overflow-hidden">
                     <img src="iloveimg-resized/DSC_0510.jpg" alt="Лера" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-amber-900 mb-3">Лера</h3>
-                    <p class="text-gray-700">
-                        Подруги называют меня вандервумен. Мол: учёный-химик, танцую танго, ныряю с аквалангом,
-                        катаюсь на лыжах, пишу рассказы и провожу Лилу. Многогранная, говорят. А я просто улыбаюсь.
-                        Потому что да — и нет. Наукой больше не занимаюсь — выбрала другой ритм. Катаюсь на синих
-                        трассах — в удовольствие, не в адреналин. Ныряю — потому что люблю быть под водой с мужем.
-                        Пишу — потому что без этого внутри тесно. А вот Лила — да. Это моё.
+                    <h3 class="text-xl font-semibold text-[#8b6b4c] mb-3">Лера</h3>
+                    <p class="text-gray-700 mb-4">
+                        Подруги называют меня вандервумен.
+                        Мол: учёный-химик, танцую танго, ныряю с аквалангом, катаюсь на лыжах, пишу рассказы и провожу Лилу.
+                        Многогранная, говорят.
+                        А я просто улыбаюсь. Потому что да — и нет.
+                        Наукой больше не занимаюсь — выбрала другой ритм.
+                        Катаюсь на синих трассах — в удовольствие, не в адреналин.
+                        Ныряю — потому что люблю быть под водой с мужем.
+                        Пишу — потому что без этого внутри тесно.
+                        А вот Лила — да. Это моё.
+                        Моё пространство. Мой дом.
+                        Где я провожу не "игру", а самое важное путешествие — к себе.
+                        Я не супергерой. Я — живая.
+                        С паузами, порывами и тишиной.
+                        И если ты рядом — ты это почувствуешь.
+
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <!-- Changed the container to be taller and added object-position to move image down -->
-                <div class="h-80 bg-amber-200 overflow-hidden">
+            <div class="bg-[#fbf8f2] rounded-lg shadow-lg overflow-hidden">
+                <div class="h-80 bg-[#e6d7c3] overflow-hidden">
                     <img src="iloveimg-resized/nadia.jpeg" alt="Надя" class="w-full h-full object-cover object-top">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-amber-900 mb-3">Надя</h3>
-                    <p class="text-gray-700">
+                    <h3 class="text-xl font-semibold text-[#8b6b4c] mb-3">Надя</h3>
+                    <p class="text-gray-700 mb-4">
                         Я — женский тренер. Помогаю женщинам вспомнить, как это — чувствовать вкус жизни.
                         Не по инструкции. Не для галочки. А по-настоящему — телом, душой, сердцем.
                         Я коуч (ICU, ICTA, IANLP), мастер НЛП, практикующий психолог, фасилитатор, ведущая медитаций.
                         Инструктор по интимной гимнастике. Ароматерапевт.
+                        Автор ретритов, тренингов, трансформационных игр.
                         Работаю с телом, психикой, энергией — мягко, бережно, глубоко.
+                        Но если коротко — я рядом, чтобы ты вспомнила себя.
+                        Ту, которая чувствует. Хочет. Живёт.
+
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div class="h-80 bg-amber-200 overflow-hidden">
+            <div class="bg-[#fbf8f2] rounded-lg shadow-lg overflow-hidden">
+                <div class="h-80 bg-[#e6d7c3] overflow-hidden">
                     <img src="iloveimg-resized/WhatsApp Image 2025-04-14 at 19.07.57.jpeg" alt="Аня" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold text-amber-900 mb-3">Аня</h3>
-                    <p class="text-gray-700">
-                        Я — таролог, нумеролог, нутрициолог. (На этом мои «-логи» заканчиваются — теперь я просто автор.)
-                        Автор двух книг: ✨ «Найди свой путь в Таро. Время знать» и 🌙 «Блеск подковы в лунном свете».
-                        И повести «Рука Мирьям», и цикла рассказов. Я разработала свой нумерологический метод — «Звезда Давида».
-                        И да, тоже мастер НЛП.
+                    <h3 class="text-xl font-semibold text-[#8b6b4c] mb-3">Аня</h3>
+                    <p class="text-gray-700 mb-4">
+                        Я — женский тренер. Помогаю женщинам вспомнить, как это — чувствовать вкус жизни.
+                        Не по инструкции. Не для галочки. А по-настоящему — телом, душой, сердцем.
+                        Я коуч (ICU, ICTA, IANLP), мастер НЛП, практикующий психолог, фасилитатор, ведущая медитаций.
+                        Инструктор по интимной гимнастике. Ароматерапевт.
+                        Автор ретритов, тренингов, трансформационных игр.
+                        Работаю с телом, психикой, энергией — мягко, бережно, глубоко.
+                        Но если коротко — я рядом, чтобы ты вспомнила себя.
+                        Ту, которая чувствует. Хочет. Живёт.
+
                     </p>
                 </div>
             </div>
@@ -428,41 +401,41 @@
 </section>
 
 <!-- Pricing Section -->
-<section id="pricing" class="py-16 sm:py-24 bg-white">
+<section id="pricing" class="py-16 sm:py-24 bg-[#f8f3e9]">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-amber-900 mb-12">Выбери свой формат</h2>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-center text-[#8b6b4c] mb-12">Выбери свой формат</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                 <div class="gradient-border custom-shadow">
                     <div class="gradient-border-content p-6">
-                        <h3 class="text-xl font-semibold text-amber-900 mb-2">💫 Soul Harmony</h3>
+                        <h3 class="text-xl font-semibold text-[#8b6b4c] mb-2">💫 Soul Harmony</h3>
                         <p class="text-gray-600 mb-3">3 дня проживания и питания<br>Четверг — Суббота</p>
                         <p class="text-lg text-gray-700 mb-2">Комната на 4 участницы</p>
-                        <p class="text-2xl font-bold text-amber-800 mb-4">2370₪</p>
+                        <p class="text-2xl font-bold text-[#8b6b4c] mb-4">2370₪</p>
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>2 ночи проживания</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Полное питание</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Все мероприятия</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Фотосессия, вечерние практики</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Welcome-подарок Chill Lady</span>
                             </li>
                         </ul>
-                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full beige-button font-medium py-3 px-6 rounded-lg text-center transition duration-300">
                             Забронировать
                         </a>
                     </div>
@@ -470,29 +443,29 @@
 
                 <div class="gradient-border custom-shadow">
                     <div class="gradient-border-content p-6">
-                        <h3 class="text-xl font-semibold text-amber-900 mb-2">🌙 Inner Glow</h3>
+                        <h3 class="text-xl font-semibold text-[#8b6b4c] mb-2">🌙 Inner Glow</h3>
                         <p class="text-gray-600 mb-3">3 дня проживания и питания<br>Четверг — Суббота</p>
                         <p class="text-lg text-gray-700 mb-2">Комната на 3 участницы</p>
-                        <p class="text-2xl font-bold text-amber-800 mb-4">2460₪</p>
+                        <p class="text-2xl font-bold text-[#8b6b4c] mb-4">2460₪</p>
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Всё, как в пакете Soul Harmony</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-plus text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-plus text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Больше уюта и приватности</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-plus text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-plus text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Больше личного пространства</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-plus text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-plus text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Баланс тишины и энергии</span>
                             </li>
                         </ul>
-                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full beige-button font-medium py-3 px-6 rounded-lg text-center transition duration-300">
                             Забронировать
                         </a>
                     </div>
@@ -500,28 +473,28 @@
 
                 <div class="gradient-border custom-shadow">
                     <div class="gradient-border-content p-6">
-                        <h3 class="text-xl font-semibold text-amber-900 mb-2">🌸 Daylight Muse</h3>
+                        <h3 class="text-xl font-semibold text-[#8b6b4c] mb-2">🌸 Daylight Muse</h3>
                         <p class="text-gray-600 mb-3">Участие без проживания, с питанием<br>Четверг — Суббота</p>
-                        <p class="text-2xl font-bold text-amber-800 mb-4">1830₪</p>
+                        <p class="text-2xl font-bold text-[#8b6b4c] mb-4">1830₪</p>
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Все дневные мероприятия</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Полное питание</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Доступ в зону отдыха</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Вечерние форматы (четверг и пятница)</span>
                             </li>
                         </ul>
-                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full beige-button font-medium py-3 px-6 rounded-lg text-center transition duration-300">
                             Забронировать
                         </a>
                     </div>
@@ -531,28 +504,28 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="gradient-border custom-shadow">
                     <div class="gradient-border-content p-6">
-                        <h3 class="text-xl font-semibold text-amber-900 mb-2">🌼 Friday Bloom</h3>
+                        <h3 class="text-xl font-semibold text-[#8b6b4c] mb-2">🌼 Friday Bloom</h3>
                         <p class="text-gray-600 mb-3">Один насыщенный день<br>Только пятница</p>
-                        <p class="text-2xl font-bold text-amber-800 mb-4">1380₪</p>
+                        <p class="text-2xl font-bold text-[#8b6b4c] mb-4">1380₪</p>
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Все пятничные активности (8:00 – 20:00)</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Питание</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Групповые практики</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Дневной чилл и вечерний круг</span>
                             </li>
                         </ul>
-                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full beige-button font-medium py-3 px-6 rounded-lg text-center transition duration-300">
                             Забронировать
                         </a>
                     </div>
@@ -560,20 +533,20 @@
 
                 <div class="gradient-border custom-shadow">
                     <div class="gradient-border-content p-6">
-                        <h3 class="text-xl font-semibold text-amber-900 mb-2">🌻 Soft Weekend</h3>
+                        <h3 class="text-xl font-semibold text-[#8b6b4c] mb-2">🌻 Soft Weekend</h3>
                         <p class="text-gray-600 mb-3">2 дня без проживания, с питанием<br>Четверг + пятница или пятница + суббота</p>
-                        <p class="text-2xl font-bold text-amber-800 mb-4">1500₪</p>
+                        <p class="text-2xl font-bold text-[#8b6b4c] mb-4">1500₪</p>
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Все дневные мероприятия в выбранные дни</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Питание включено</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check text-amber-600 mt-1 mr-2"></i>
+                                <i class="fas fa-check text-[#d2b48c] mt-1 mr-2"></i>
                                 <span>Гибкий формат для гибкого ритма</span>
                             </li>
                         </ul>
@@ -583,7 +556,7 @@
                             <p>Пятница: 8:00 — 20:00</p>
                             <p>Суббота: 8:00 — 14:00</p>
                         </div>
-                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-6 rounded-lg text-center transition duration-300">
+                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="block w-full beige-button font-medium py-3 px-6 rounded-lg text-center transition duration-300">
                             Забронировать
                         </a>
                     </div>
@@ -593,10 +566,10 @@
             <div class="mt-12">
                 <div class="gradient-border custom-shadow max-w-md mx-auto">
                     <div class="gradient-border-content p-6 text-center">
-                        <h3 class="text-xl font-semibold text-amber-900 mb-3">Предоплата</h3>
-                        <p class="text-2xl font-bold text-amber-800 mb-4">600₪</p>
+                        <h3 class="text-xl font-semibold text-[#8b6b4c] mb-3">Предоплата</h3>
+                        <p class="text-2xl font-bold text-[#8b6b4c] mb-4">600₪</p>
                         <p class="text-gray-700 mb-6">Для бронирования места необходима предоплата</p>
-                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="inline-block bg-amber-700 hover:bg-amber-800 text-white font-medium py-3 px-8 rounded-full transition duration-300">
+                        <a href="https://allpay.to/~nmorozovsky/3d4d20" class="inline-block beige-button font-medium py-3 px-8 rounded-full transition duration-300">
                             Внести предоплату
                         </a>
                     </div>
@@ -607,9 +580,9 @@
 </section>
 
 <!-- Gallery Section -->
-<section id="gallery" class="py-16 bg-white">
+<section id="gallery" class="py-16 bg-[#f8f3e9]">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">Фотографии места</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-[#8b6b4c]">Фотографии места</h2>
 
         <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
             <!-- Gallery items with hover effects and masonry-style layout -->
@@ -686,27 +659,57 @@
         </div>
     </div>
 </section>
+
 <!-- Contact Section -->
-<section class="py-16 sm:py-24 bg-amber-700 text-white">
+<section class="py-16 sm:py-24 bg-[#d2b48c] text-[#5d4037]">
     <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
             <h2 class="text-3xl sm:text-4xl font-semibold mb-8">Есть вопросы?</h2>
             <p class="text-lg mb-8">
                 По любым вопросам обращаться по номеру WhatsApp:
             </p>
-            <a href="https://wa.me/972525591570" class="inline-flex items-center text-xl font-semibold bg-white text-amber-700 py-3 px-8 rounded-full hover:bg-amber-100 transition duration-300">
+            <a href="https://wa.me/972525591570" class="inline-flex items-center text-xl font-semibold bg-[#f8f3e9] text-[#8b6b4c] py-3 px-8 rounded-full hover:bg-[#f0e6d6] transition duration-300">
                 <i class="fab fa-whatsapp text-2xl mr-3"></i>
                 0525591570
             </a>
+            <p class="text-lg mt-8">
+                Для бронирования места — предоплата 600 шек
+            </p>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-8 bg-amber-900 text-white">
+<footer class="py-8 bg-[#8b6b4c] text-white">
     <div class="container mx-auto px-4 text-center">
         <p>&copy; 2025 Weekend - Chill Lady. Все права защищены.</p>
     </div>
 </footer>
+
+<script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.md\\:hidden button');
+        const closeButton = document.querySelector('#mobile-menu button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+        if (menuButton && closeButton && mobileMenu) {
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            closeButton.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    });
+</script>
 </body>
 </html>
